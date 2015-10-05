@@ -1,0 +1,10 @@
+E:\rahul\Test Pro\DemoTestDbmanger\DemoTestDbmanger\obj\Release\DemoTestDbmanger.csprojResolveAssemblyReference.cache
+E:\rahul\Test Pro\DemoTestDbmanger\DemoTestDbmanger\bin\DemoTestDbmanger.dll.config
+E:\rahul\Test Pro\DemoTestDbmanger\DemoTestDbmanger\bin\DemoTestDbmanger.dll
+E:\rahul\Test Pro\DemoTestDbmanger\DemoTestDbmanger\bin\DemoTestDbmanger.pdb
+E:\rahul\Test Pro\DemoTestDbmanger\DemoTestDbmanger\bin\DBManager.dll
+E:\rahul\Test Pro\DemoTestDbmanger\DemoTestDbmanger\bin\SendGrid.SmtpApi.dll
+E:\rahul\Test Pro\DemoTestDbmanger\DemoTestDbmanger\bin\SendGridMail.dll
+E:\rahul\Test Pro\DemoTestDbmanger\DemoTestDbmanger\bin\DBManager.pdb
+E:\rahul\Test Pro\DemoTestDbmanger\DemoTestDbmanger\obj\Release\DemoTestDbmanger.dll
+E:\rahul\Test Pro\DemoTestDbmanger\DemoTestDbmanger\obj\Release\DemoTestDbmanger.pdb
