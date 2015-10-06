@@ -21,7 +21,7 @@ namespace Model.DemoTestDbmanger
     public class School
     {
         public int? ID { get; set; }
-        [DataMember(SYNC_TABLE=false)]
+        [DataMember(SYNC_PROERTY=false)]
         public int? ID2 { get; set; }
         public decimal? later { get; set; }
         public String Name { get; set; }
