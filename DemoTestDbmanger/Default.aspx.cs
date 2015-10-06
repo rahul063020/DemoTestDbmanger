@@ -9,6 +9,8 @@ using System.Configuration;
 using System.Reflection;
 using System.Threading.Tasks;
 using Model.DemoTestDbmanger;
+using System.Data;
+using DemoTestDbmanger.DataModel;
 namespace DemoTestDbmanger
 {
     public partial class Default : System.Web.UI.Page
@@ -20,22 +22,42 @@ namespace DemoTestDbmanger
          {
              MediaConnection.Instance().ConnectionString = ConfigurationManager.ConnectionStrings["ConnStringDb"].ToString();
              DBContext<School> lst = new DBContext<School>();
-            // lst.SyncDbEntity();
-           //  lst.Select.ID = 1;
-
-            // List<School> drt = lst.Result;
-
+            
+             List<School> lstSch = lst.Result;
              int id = lst.NextIncrementID;
              lst.Result = new List<School>();
-             lst.Result.Add(new School { Count = 2, CreatedAt = DateTime.Now, GuId = Guid.NewGuid(), Name = "Prtfght", Role = 23, USER_ID = 1 });
+             lst.Result.Add(new School {later=3, Count = 2, CreatedAt = DateTime.Now, GuId = Guid.NewGuid(), Name = "Prtfght", Role = 23, USER_ID = 1 });
+
+             lst.SaveChanges();
+
+             // lst.SyncDbEntity();
+             //  lst.Select.ID = 1;
+
+             // List<School> drt = lst.Result;
+
              //lst.Result[0].GuId = Guid.NewGuid();
              //for (int i = 1; i < 30;i++ )
              //{
              //    lst.Result.Add(new School { Count = i, CreatedAt = DateTime.Now, GuId = new Guid(), Name = "" + i, Role = i });
              //}
-            
-             lst.SaveChanges();
 
+             Test ds = new Test();
+             for (int i = 1; i < 3; i++)
+             {
+                 DataRow dr = ds.School.NewRow();
+                 dr["ID"] = i;
+                 dr["Name"] = "" + i;
+                 dr["Role"] = i;
+                 dr["Count"] = i;
+                 dr["GuId"] = Guid.NewGuid();
+                 dr["CreatedAt"] = DateTime.Now;
+                 dr["USER_ID"] = 2;
+                 ds.School.Rows.Add(dr);
+             }
+             DBMContext contxt = new DBMContext();
+             contxt.SaveRecords(ds);
+             IProduction pro = new Production();
+             String query = pro.produceDataSetUpdateQuery(ds);
            // delegate int del(int i);
 
             //del myDelegate = x => x * x;

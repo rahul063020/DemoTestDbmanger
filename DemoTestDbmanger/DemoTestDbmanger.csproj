@@ -106,6 +106,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataModel\Test.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Test.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -154,6 +159,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Models\Images\Sorting icons.psd" />
+    <Content Include="DataModel\Test.xsc">
+      <DependentUpon>Test.xsd</DependentUpon>
+    </Content>
+    <None Include="DataModel\Test.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Test.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DataModel\Test.xss">
+      <DependentUpon>Test.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
