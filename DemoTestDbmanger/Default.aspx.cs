@@ -23,10 +23,12 @@ namespace DemoTestDbmanger
              MediaConnection.Instance().ConnectionString = ConfigurationManager.ConnectionStrings["ConnStringDb"].ToString();
              DBContext<School> lst = new DBContext<School>();
             
-             List<School> lstSch = lst.Result;
-             int id = lst.NextIncrementID;
-             lst.Result = new List<School>();
-             lst.Result.Add(new School {later=3, Count = 2, CreatedAt = DateTime.Now, GuId = Guid.NewGuid(), Name = "Prtfght", Role = 23, USER_ID = 1 });
+             
+            lst.Select.ID = 3;
+            List<School> lstSch = lst.Result;
+            int id = lst.NextIncrementID;
+           // lst.Result = new List<School>();
+           // lst.Result.Add(new School {later=3, Count = 2, CreatedAt = DateTime.Now, GuId = Guid.NewGuid(), Name = "Prtfght", Role = 23, USER_ID = 1,ID2=3 });
 
              lst.SaveChanges();
 
